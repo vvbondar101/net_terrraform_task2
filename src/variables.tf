@@ -1,4 +1,16 @@
 ###cloud vars
+
+variable "image_name" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "yandex compute image name"
+}
+variable "vm_name_prefix" {
+  type        = string
+  default     = "netology-develop-platform"
+  description = "VM Name prefix"
+}
+
 variable "token" {
   type        = string
   description = "OAuth-token; https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token"
@@ -31,11 +43,3 @@ variable "vpc_name" {
   description = "VPC network & subnet name"
 }
 
-
-###ssh vars
-
-variable "vms_ssh_root_key" {
-  type        = string
-  default     = "<your_ssh_ed25519_key>"
-  description = "ssh-keygen -t ed25519"
-}
